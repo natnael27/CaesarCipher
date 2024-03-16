@@ -1,13 +1,10 @@
 public class CaesarCipher {
-
     public static String encrypt(String message, int shift) {
 
     // Convert message to uppercase
     message = message.toUpperCase(); 
-
     // Initialize empty string for encrypted message
     String encryptedMessage = ""; 
-
     // Encrypt each letter in the message
     for (int i = 0; i < message.length(); i++) {
     char c = message.charAt(i); 
@@ -16,9 +13,11 @@ public class CaesarCipher {
     if (Character.isLetter(c)) {
     char shifted = (char) (((c - 'A' + shift) % 26) + 'A');
     encryptedMessage += shifted;
-    } else {
+    } 
+    else {
     encryptedMessage += c;
     }
+
     } 
     return encryptedMessage;
     } 
@@ -27,10 +26,8 @@ public class CaesarCipher {
 
     // Convert message to uppercase
     message = message.toUpperCase(); 
-
     // Initialize empty string for decrypted message
     String decryptedMessage = ""; 
-
     // Decrypt each letter in the message
     for (int i = 0; i < message.length(); i++) {
     char c = message.charAt(i); 
